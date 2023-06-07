@@ -22,7 +22,7 @@ cursor.execute(create_table_query)
 print("table created successfully")
 
 insert_query = "INSERT INTO table_name1 (column1,column2) values(%s,%s)"
-data=("value1",87)
+data = [("Value2",99),("Value3",15),("Value4",95),("Value5",56)]
 cursor.execute(insert_query,data)
 connection.commit()
 
@@ -34,3 +34,4 @@ for i in rows:
     
 drop_query="drop table table_name1"
 cursor.execute(drop_query)
+
