@@ -35,3 +35,7 @@ for i in rows:
 drop_query="drop table table_name1"
 cursor.execute(drop_query)
 
+# now to fianlly close the connection and release
+# the memory we have to use the following:
+cursor.close()
+connection.close()
